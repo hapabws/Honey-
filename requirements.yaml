@@ -1,0 +1,10 @@
+packages:
+  "framer-motion": "For elegant, premium scroll animations and micro-interactions"
+  "react-hook-form": "For robust contact form state management"
+  "@hookform/resolvers": "For form validation with Zod"
+  "zod": "Schema validation for the contact form"
+
+notes:
+  - This is a single-page scrolling website. All content resides on the Home page.
+  - Native CSS smooth scrolling is used for navigation.
+  - The contact form is a functional UI mockup; it validates and shows a success toast but does not make an actual backend API call.

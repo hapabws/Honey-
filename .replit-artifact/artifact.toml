@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "A-One Beauty Parlour"
+version = "1.0.0"
+id = "artifacts/a-one-beauty"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 25844
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/a-one-beauty run dev"
+
+[services.env]
+PORT = "25844"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/a-one-beauty", "run", "build"]
+publicDir = "artifacts/a-one-beauty/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
